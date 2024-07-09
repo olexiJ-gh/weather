@@ -1,0 +1,430 @@
+* {
+	background-color: #f1f1f1;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #f1f1f1;
+}
+#ch_theme{
+	width: 100%;
+	background: #f1f1f1;
+	height: 100%;
+}
+/* Діалогове вікно */
+.dialog_window {
+	margin: 0 auto;
+	place-items: center;
+	z-index: 1000;
+	transform: translate(0%, 50%);
+	position: absolute;
+	background: none;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	width: 100%;
+
+	/*
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px);*/
+}
+
+.dialog_window::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transform: translateY(-150px);
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(10px); 
+	z-index: -1; 
+}
+
+#temperature,
+#wind,
+#humidity,
+#city_form_name {
+	color: gray;
+}
+
+.dialog_form {
+	border-radius: 15px;
+	width: 300px;
+	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+	row-gap: 10px;
+}
+
+.dialog_window form {
+	text-align: center;
+	margin: 0 auto;
+	place-content: center;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.dialog_form input {
+	border: none;
+	border-radius: 10px;
+	text-align: center;
+	font-size: medium;
+	margin-top: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	transform: translateY(-70px);
+}
+
+.form_text {
+	transform: translateY(60px);
+	border-radius: 20px;
+	background: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#submit {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	color: gray;
+	cursor: pointer;
+	place-items: center;
+}
+
+.submit_button {
+	width: 60px;
+	margin: 0 auto;
+	display: flex;
+	cursor: pointer;
+	place-content: center;
+}
+
+.close_img {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	margin: 0 auto;
+	transform: translateX(-5px) translateY(0px);
+}
+
+.close_form {
+	background-color: #f1f1f1;
+	display: flex;
+	height: 25px;
+	width: 24px;
+	border-radius: 5px;
+	z-index: 1000;
+	margin: 0 auto;
+	transform: translateX(120px) translateY(-280px);
+}
+
+.enter_data {
+	color: gray;
+	margin-bottom: 70px;
+}
+
+/* Форма всього додатку*/
+.all-weather-block {
+	display: flex;
+	max-width: 1000px;
+	margin: 0 auto;
+	z-index: -100;
+	background: #f1f1f1;
+}
+
+.form {
+	padding: 25px 35px;
+	width: 90%;
+	max-width: 500px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+	height: 80%;
+	max-height: 600px;
+	border-radius: 20px;
+	margin: 0 auto;
+	transform: translateY(20px);
+	background: linear-gradient(to bottom right, #13e6b3, #575b8b);
+}
+.search-line {
+	text-align: center;
+}
+
+.search-button img {
+	height: 24px;
+	width: 24px;
+	margin-top: 4px;
+}
+.search-button {
+	border: none;
+	border-radius: 15px;
+	width: 12%;
+	border: 2px gray;
+	cursor: pointer;
+}
+
+.change_theme img {
+	background: none;
+	width: 24px;
+	height: 24px;
+}
+
+.change_theme {
+	border: none;
+	background: none;
+	border-radius: 15px;
+	color: black;
+	margin-right: -20px;
+	cursor: pointer;
+}
+.search-block {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	justify-content: space-between;
+	background: none;
+}
+
+.search-line {
+	border-radius: 15px;
+	border: 2px gray;
+	color: gray;
+	font-size: 17px;
+	width: 82%;
+}
+
+/*Центральна частина додатку*/
+
+.weather-icon {
+	height: 45%;
+	width: 45%;
+	background: none;
+	place-content: center;
+}
+
+#city-h1 {
+	position: relative;
+	background: none;
+	font-size: 48px;
+	margin: 0 auto;
+	font-weight: 400;
+	text-align: center;
+	transform: translateY(-110px);
+}
+
+.middle-block {
+	background: none;
+}
+
+.weather_img {
+	place-items: center;
+	position: relative;
+	display: flex;
+	margin: 0 auto;
+	margin-top: 30px;
+	place-content: center;
+	background: none;
+}
+
+.temperature_form {
+	display: flex;
+	gap: -10px;
+	background: none;
+	align-items: center;
+	place-content: center;
+	margin: 0 auto;
+	transform: translateY(-50px);
+}
+
+#temperature_celsius {
+	background: none;
+	font-weight: 400;
+	font-size: 70px;
+}
+
+/* Кінцева частина додатку */
+
+.wind_icon,
+.humidity_icon {
+	width: 58%;
+	height: 58%;
+	background: none;
+	margin: 0 auto;
+}
+
+.wind_h1,
+.humidity_h1 {
+	font-weight: 300;
+	background: none;
+	margin: 0 auto;
+	width: 100px;
+	transform: translateY(3px);
+}
+
+.wind-h1 h1 {
+	width: 100px;
+}
+.humidity {
+	background: none;
+	display: flex;
+	width: 100px;
+	gap: 20px;
+	justify-content: space-between;
+	color: gray;
+}
+
+.wind {
+	background: none;
+	transform: translateX(-120px);
+	display: flex;
+	width: 100px;
+	gap: 20px;
+	justify-content: space-between;
+	color: gray;
+}
+
+.humidity_value,
+.wind_speed {
+	background: none;
+	font-weight: 500;
+	font-size: 28px;
+	margin: 0 auto 0;
+	width: 100px;
+}
+
+/* Humidity & Wind container */
+
+.hw-container {
+	display: flex;
+	place-content: center;
+	background: none;
+	justify-content: space-between;
+	gap: 60px;
+}
+
+/* Список всіх збережених міст */
+
+.city_list {
+	display: flex;
+	margin: 0 auto;
+	background: #f1f1f1;
+}
+
+.city_form {
+	margin: auto 0;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	background: linear-gradient(to top right, #13e6b3, #575b8b);
+	height: 90%;
+	max-height: 600px;
+	width: 240px;
+	padding: 25px 35px;
+	transform: translateY(20px);
+}
+
+/*.city_form div{
+	color: gray;
+	border-radius: 10px;
+	height: 15px;
+	width: 70%;
+	gap: 10;
+	display: table-column;
+}*/
+
+.add_city_img {
+	height: 50px;
+	width: 60px;
+	border-radius: 10px;
+	place-content: center;
+	display: flex;
+	margin: 0 auto;
+	border: none;
+}
+
+#add_city {
+	margin: 0 auto;
+	transform: translateY(10px);
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	bottom: 50%;
+}
+
+.input_city_name {
+	border-radius: 10px;
+	background: none;
+	text-align: center;
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	margin: 0 auto;
+	align-items: center;
+	place-items: center;
+	justify-content: center;
+}
+
+#input_city_name {
+	background: none;
+}
+
+.input_city_name h1 {
+	margin-top: 3px;
+}
+
+#saved_city {
+	text-align: center;
+	color: gray;
+	border-radius: 10px;
+	font-weight: 400;
+	height: 50px;
+	width: 100%;
+	font-size: 18px;
+	margin: 0;
+}
+
+.div_form {
+	border-radius: 10px;
+	height: 20px;
+	width: 77%;
+	cursor: pointer;
+	color: gray;
+	margin-bottom: 10px;
+	transform: translateY(-10px);
+}
+
+.form_city_name_button {
+	color: gray;
+	border: none;
+	border-radius: 10px;
+	height: 90%;
+	margin: 0 auto;
+	width: 60%;
+}
+
+#div_city_form {
+	margin-top: 20px;
+	height: 25px;
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+}
+
+.form_back {
+	background: none;
+	z-index: -100;
+	height: 100%;
+}
+
+#saved_city {
+	text-align: center;
+	display: flex;
+	place-items: center;
+	place-content: center;
+
+	width: 100%;
+}

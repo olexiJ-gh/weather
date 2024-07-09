@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App(PetProject)</title>
+</head>
+
+<body id="ch_theme">
+  <div class="dialog_window" id="dialog_window" style="display: none;">
+    <div class="dialog_form">
+      <div class="form_text">
+        <h3 class="enter_data">Enter data of your city!</h3>
+        <input type="text" placeholder="Write name of city" title="Write city name!" id="city_form_name">
+        <input type="text" placeholder="Temperature" title="Write number of your temperature!" id="temperature">
+        <input type="text" placeholder="Humidity" id="humidity" title="Write number of your humidity!">
+        <input type="text" placeholder="Wind Speed" id="wind" title="Write the speed of your wind!">
+        <div class="submit_button"><input type="submit" id="submit"></div>
+        <button class="close_form" id="close_form">
+          <img src="./assets2/close.png" class="close_img">
+        </button>
+      </div>
+    </div>
+  </div>
+  <section class="all-weather-block">
+    <div class="form">
+      <div class="search-block">
+        <input type="text" class="search-line" id="search-line" spellcheck=false placeholder="Enter your location">
+        <button class="search-button" id="search-button">
+          <img src='assets2/search.png'>
+          <button class="change_theme" id="change_theme">
+            <img src='./assets2/theme/darkmode.png'>
+          </button>
+        </button>
+      </div>
+      <div class="middle-block">
+        <div class="weather_img">
+          <img src='./new_assets/clouds.png' class='weather-icon' id='weather-icon'>
+        </div>
+        <div class="temperature_form">
+          <h1 id="temperature_celsius">22°C</h1>
+        </div>
+        <h1 id='city-h1'>New York</h1>
+      </div>
+      <div class="hw-container">
+        <div class="humidity">
+          <img class="humidity_icon" src='assets2/humidity.png'>
+          <h1 class="humidity_value" id="humidity_value">91%</h1>
+          <h1 class="humidity_h1">Humidity</h1>
+        </div>
+        <div class="wind">
+          <img class="wind_icon" src='assets2/Wind1.png'>
+          <h1 class="wind_speed" id="wind_speed">15m/s</h1>
+          <h1 class="wind_h1">Wind</h1>
+        </div>
+      </div>
+    </div>
+    <div class="city_list">
+      <div class="city_form">
+          <div class="input_city_name" id="input_city_name">
+            <h1 id="saved_city">Saved City Weather</h1>
+            <button class="add_city_img" id="add_city_img"><img src="./assets2/add.png" id="add_city"></button>
+          </div>
+          <div id="city_form">
+            <form class="form_back" id="div_city_form"></form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <script src="all_system.js"></script>
+</body>
+
+</html> 
