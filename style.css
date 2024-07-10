@@ -14,11 +14,6 @@ body {
 	box-sizing: border-box;
 	background-color: #f1f1f1;
 }
-#ch_theme{
-	width: 100%;
-	background: #f1f1f1;
-	height: 100%;
-}
 /* Діалогове вікно */
 .dialog_window {
 	margin: 0 auto;
@@ -168,20 +163,6 @@ body {
 	cursor: pointer;
 }
 
-.change_theme img {
-	background: none;
-	width: 24px;
-	height: 24px;
-}
-
-.change_theme {
-	border: none;
-	background: none;
-	border-radius: 15px;
-	color: black;
-	margin-right: -20px;
-	cursor: pointer;
-}
 .search-block {
 	display: flex;
 	width: 100%;
@@ -195,7 +176,7 @@ body {
 	border: 2px gray;
 	color: gray;
 	font-size: 17px;
-	width: 82%;
+	width: 85%;
 }
 
 /*Центральна частина додатку*/

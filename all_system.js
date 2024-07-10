@@ -122,18 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
-    document.getElementById('change_theme').addEventListener('click', function () {
-        if (document.getElementById('ch_theme').style.background = '#f1f1f1') {
-            document.getElementById('ch_theme').style.background = 'black'
-            document.querySelector('.all-weather-block').style.background = 'black'
-            document.querySelector('.city_list').style.background = 'black'
-        } else {
-            document.getElementById('ch_theme').style.background = '#f1f1f1'
-            document.querySelector('.all-weather-block').style.background = '#f1f1f1'
-            document.querySelector('.city_list').style.background = '#f1f1f1'
-
-        }
-    })
 
     document.getElementById('search-button').onclick = all_change;
 });
